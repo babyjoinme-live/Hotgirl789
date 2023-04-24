@@ -36,4 +36,42 @@
 
 
 
+</body></html><!DOCTYPE html><html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://drive.google.com/uc?id=19zF7Lp7MqgDrp9r0G7yZ6aZnGZ6KDHVj">
+<link rel="icon" href="https://drive.google.com/uc?id=1h7wx4GlHlYHQJ87-mCMteusHs6VagxKY">
+<link rel="apple-touch-icon" href="https://drive.google.com/uc?id=1BSm8M-1b2cwzbzfDTPPYt9viywkXKy4i">
+<title>View My Profile</title>
+
+</head>
+
+<body>
+  <p id="countdown">You will be automatically redirected to my profile</p>
+  
+  <script>
+    var app = "vnd.youtube://youtube.com/redirect?event=comments&redir_token=QUFFLUhqbE5HMDhvY1BVdlJ2a1ZuQXJPOGJKZVhiaWo1QXxBQ3Jtc0traVQ3Ym1VYlJBWGRVWW96N012MWFmQ05kVXdFZzk3TGxjSWhHVXU5VThyZ3VCanhCU0FCTGZrMGVWRE91c09NaVhCZmRHSmdjbUlfd19CVzJlQnNWU3FDMVgzYjZZUlNXVWRUZzRPNU5Tczcxb3ZWYw&q=https%3A%2F%2Fv.ht%2FQU8pv&html_redirect=1";
+
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+
+        if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          window.location.href = app;
+          window.setTimeout(function() {
+            window.location.href = mobileFallback;
+          }, 25);
+        } else {
+          window.location.href = desktopFallback;
+        }
+
+        function killPopup() {
+          window.removeEventListener('pagehide', killPopup);
+        }
+
+        window.addEventListener('pagehide', killPopup);
+      }, 10);
+    });
+  </script>
+
+
+
 </body></html>
